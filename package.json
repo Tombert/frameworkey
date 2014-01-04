@@ -7,7 +7,12 @@
     "koa": "~0.2.1",
     "koa-router": "~2.2.0",
     "sequelize": "~2.0.0-beta.6",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "co-views": "~0.1.0",
+    "co": "~3.0.2",
+    "koa-render": "~0.2.1",
+    "merge": "~1.1.2",
+    "debug": "~0.7.4"
   },
   "devDependencies": {},
   "scripts": {
