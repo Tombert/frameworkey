@@ -6,7 +6,8 @@
   "dependencies": {
     "koa": "~0.2.1",
     "koa-router": "~2.2.0",
-    "sequelize": "~2.0.0-beta.6"
+    "sequelize": "~2.0.0-beta.6",
+    "underscore": "~1.5.2"
   },
   "devDependencies": {},
   "scripts": {
