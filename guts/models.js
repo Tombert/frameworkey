@@ -13,7 +13,7 @@ require("fs").readdirSync("./models").forEach(function(file) {
 for(var k in models){
   var modelObject = {};
   for(var j in models[k]){
-    modelObject[j] = Sequelize[model[k][j]]; 
+    modelObject[j] = Sequelize[models[k][j]]; 
   }
   db[k] = sequelize.define(k, modelObject); 
 }
