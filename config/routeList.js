@@ -1,3 +1,3 @@
 module.exports = {
-  'GET /yo/:id':'User.find'
+  'GET /yo/:id':'User.find User.test'
 }
