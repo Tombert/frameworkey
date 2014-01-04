@@ -6,7 +6,8 @@ var views = require('./views');
 module.exports = function(app){
   app.use(views('./views', {
     map: {
-      html: 'underscore'
+      html: 'ejs', 
+      ejs: 'ejs'
     },
     locals: {
       title: 'with underscore'
