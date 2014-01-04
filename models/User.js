@@ -1,3 +1,3 @@
 module.exports = {
-  'field':'TYPE'
+  'username':'STRING'
 }
