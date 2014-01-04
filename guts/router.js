@@ -1,12 +1,7 @@
 var routeList = require('../config/routeList');
 var router = require('koa-router'); 
-var controllers = {}
-require("fs").readdirSync("./controllers").forEach(function(file) {
-  if (file.match(/.+\.js/g) !== null && file !== 'index.js') {
-    var name = file.replace('.js', '');
-    controllers[name] = require("../controllers/" + file);
-  }
-});
+var controllers = require('./controllers')
+
 module.exports = function(app){
   app.use(router(app)); 
   for(var k in routeList){
