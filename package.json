@@ -1,0 +1,35 @@
+{
+  "name": "Frameworkey",
+  "version": "0.0.1",
+  "description": "An MVC framework written for Koa",
+  "main": "app.js",
+  "dependencies": {
+    "koa": "~0.2.1",
+    "koa-router": "~2.2.0",
+    "sequelize": "~2.0.0-beta.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tombert256/frameworkey.git"
+  },
+  "keywords": [
+    "MVC",
+    "model",
+    "view",
+    "controller",
+    "frameworkey",
+    "tombert",
+    "koa",
+    "koajs"
+  ],
+  "author": "Thomas Gebert",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/tombert256/frameworkey/issues"
+  },
+  "homepage": "https://github.com/tombert256/frameworkey"
+}
