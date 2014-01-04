@@ -1,8 +1,18 @@
 var routeList = require('../config/routeList');
 var router = require('koa-router'); 
 var controllers = require('./controllers')
+var views = require('./views'); 
 
 module.exports = function(app){
+  app.use(views('./views', {
+    map: {
+      html: 'underscore'
+    },
+    locals: {
+      title: 'with underscore'
+    },
+    cache: false
+  }));
   app.use(router(app)); 
   for(var k in routeList){
     var functionsToCall = []

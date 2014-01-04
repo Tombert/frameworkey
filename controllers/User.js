@@ -1,3 +1,6 @@
+var co = require('co');
+var render = require('co-render');
+
 module.exports = {
   find: function *(next){
     console.log('Enter Find Function');
@@ -6,6 +9,11 @@ module.exports = {
   },
   test: function *(next){
     console.log('enter test function');
+    this.body = yield this.render('blah', {name: 'koa'})
+    // co(function *(){
+    //   this.body = yield this.render('blah', {name: 'asdfasdf'})      
+    // })
+
     yield next; 
   }
 }
