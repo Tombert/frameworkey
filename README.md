@@ -11,3 +11,8 @@ What this Does
 
 Frameworkey provides easy wrapping for popular Koa/Node modules to give a
 Rails/Play/Django-like experience for Koa development. 
+
+
+License
+=======
+Frameworkey is licensed under the 2-part BSD License.
