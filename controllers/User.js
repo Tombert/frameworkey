@@ -6,5 +6,6 @@ module.exports = {
   },
   test: function *(next){
     console.log('enter test function');
+    yield next; 
   }
 }
