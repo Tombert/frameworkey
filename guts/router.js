@@ -1,4 +1,4 @@
-var routeList = require('../config/routeList');
+var routeList = require('../config/routes');
 var router = require('koa-router'); 
 var controllers = require('./controllers')
 var views = require('./views'); 
