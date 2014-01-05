@@ -1,26 +1,16 @@
 var koa = require('koa');
 var app = koa();
+var logger = require('koa-logger');
 var render = require('koa-render'); 
 var router = require('./guts/router');
 var models = require('./guts/models');
 var views = require('./guts/views'); 
-//var views = require('./views/'); 
+
+
+app.use(logger());
 
 router(app); 
 
-// app.use(views('./views', {
-//   map: {
-//     html: 'underscore'
-//   },
-//   locals: {
-//     title: 'with underscore'
-//   },
-//   cache: false
-// }));
-
-//view.add('layout', __dirname + '/views')
-
-//koa.use(view());
 
 var port = 3000
 app.listen(port);
