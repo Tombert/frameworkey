@@ -15,7 +15,8 @@
     "co": "~3.0.2",
     "koa-render": "~0.2.1",
     "merge": "~1.1.2",
-    "debug": "~0.7.4"
+    "debug": "~0.7.4",
+    "formidable": "~1.0.14"
   },
   "devDependencies": {},
   "scripts": {
