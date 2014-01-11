@@ -9,7 +9,14 @@ var policies = require('./policies');
 
 var checkAuth = function(cont, action){
   return function *(next){
-    var isAllowed = yield yil.callback(policies, cont, action, this); 
+    var isAllowed = true
+    var p = yield yil.callback(policies, cont, action); 
+    
+    for(var i=0; i<p.length; i+=1){
+      var onePolicyAllowed = yield yil.callback(p[i], this); 
+      isAllowed = isAllowed && onePolicyAllowed; 
+    }
+    
     if (isAllowed){
       yield next; 
     } else {

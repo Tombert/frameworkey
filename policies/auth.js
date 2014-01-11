@@ -1,4 +1,4 @@
-module.exports = function(scope){
-
-  return true; 
+module.exports = function(scope, callback){
+  
+  callback(null, true); 
 }

@@ -15,20 +15,25 @@ require("fs").readdirSync("./policies").forEach(function(file) {
 
 
 
-module.exports = function (cont, action, scope, callback){
-  var yil = require('yil');  
-  var isAllowed = true; 
+module.exports = function (cont, action, callback){
 
-  //Right now, it's true until proven false.  
+  var policyFuncs = []
+
+  
 
 
-  policies = rules[cont][action]
-  for(var i = 0; i< policies.length; i+=1){
-//console.log(customPolicies[policies[i]])
-    var test = customPolicies[policies[i]](scope); 
 
-    //Standard trick to stack permissions in a loop by first comparing to something that's true. 
-    isAllowed = isAllowed && test; 
-    callback(null, isAllowed); 
+
+  if ((typeof rules !== "undefined" && rules !== null ? (_ref = rules[cont]) != null ? _ref[action] : void 0 : void 0) != null) {
+    var policies = rules[cont][action]    
+  } else {
+    var policies = rules[cont]['*']; 
   }
+  
+  for(var i=0; i<policies.length; i+=1){
+    policyFuncs.push(customPolicies[policies[i]]); 
+  }
+  
+  
+  callback(null, policyFuncs); 
 }
